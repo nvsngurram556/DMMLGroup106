@@ -1,0 +1,6 @@
+2025-02-28 02:26:50,786:INFO:Dataset is read successfully
+2025-02-28 02:26:50,827:INFO:Connected to the database
+2025-02-28 02:26:50,827:INFO:------------------DataIngestion script started------------------
+2025-02-28 02:26:50,835:INFO:Table created successfully
+2025-02-28 02:26:51,567:INFO:Data is inserted into table!
+2025-02-28 02:26:51,568:INFO:------------------DataIngestion script completed------------------
