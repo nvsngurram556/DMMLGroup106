@@ -1,0 +1,11 @@
+2025-03-01 03:28:29,526:INFO:Connected to the database
+2025-03-01 03:28:29,526:INFO:------------------DataIngestion script started------------------
+2025-03-01 03:28:29,526:INFO:------------------Part 1 DataIngestion started------------------
+2025-03-01 03:28:31,696:INFO:Dataset is downloaded successfully
+2025-03-01 03:28:31,798:INFO:Columns are updated successfully
+2025-03-01 03:28:31,799:INFO:------------------Part 1 DataIngestion completed------------------
+2025-03-01 03:28:31,799:INFO:------------------Part 2 DataIngestion started------------------
+2025-03-01 03:28:31,805:WARNING:Table already exists
+2025-03-01 03:28:33,096:INFO:Data is inserted into table!
+2025-03-01 03:28:33,097:INFO:------------------Part 2 DataIngestion completed------------------
+2025-03-01 03:28:33,097:INFO:------------------DataIngestion script completed------------------
