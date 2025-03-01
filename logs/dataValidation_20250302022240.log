@@ -1,0 +1,63 @@
+2025-03-02 02:22:40,811:ERROR:Error in creating the directory
+2025-03-02 02:22:40,811:INFO:Missing Data
+2025-03-02 02:22:40,811:ERROR:Error in checking missing data
+2025-03-02 02:22:40,811:INFO:Inconsistent Data
+2025-03-02 02:22:40,811:ERROR:Error in checking inconsistent data
+2025-03-02 02:22:40,811:INFO:Type errors
+2025-03-02 02:22:40,811:ERROR:Error in validating data types
+2025-03-02 02:22:40,811:INFO:format errors
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,811:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:ERROR:Error in validating data formats
+2025-03-02 02:22:40,812:INFO:Duplicates Data
+2025-03-02 02:22:40,812:ERROR:Error in identifying duplicates
+2025-03-02 02:22:40,812:INFO:Data Quality Report:
+{'missing_data': None, 'inconsistent_data': None, 'type_errors': None, 'format_errors_CustomerID': None, 'format_errors_Gender': None, 'format_errors_Age': None, 'format_errors_Under30': None, 'format_errors_SeniorCitizen': None, 'format_errors_Married': None, 'format_errors_Dependents': None, 'format_errors_NumberofDependents': None, 'format_errors_Country': None, 'format_errors_State': None, 'format_errors_City': None, 'format_errors_ZipCode': None, 'format_errors_Latitude': None, 'format_errors_Longitude': None, 'format_errors_Population': None, 'format_errors_Quarter': None, 'format_errors_ReferredaFriend': None, 'format_errors_NumberofReferrals': None, 'format_errors_TenureinMonths': None, 'format_errors_Offer': None, 'format_errors_PhoneService': None, 'format_errors_AvgMonthlyLongDistanceCharges': None, 'format_errors_MultipleLines': None, 'format_errors_InternetService': None, 'format_errors_InternetType': None, 'format_errors_AvgMonthlyGBDownload': None, 'format_errors_OnlineSecurity': None, 'format_errors_OnlineBackup': None, 'format_errors_DeviceProtectionPlan': None, 'format_errors_PremiumTechSupport': None, 'format_errors_StreamingTV': None, 'format_errors_StreamingMovies': None, 'format_errors_StreamingMusic': None, 'format_errors_UnlimitedData': None, 'format_errors_Contract': None, 'format_errors_PaperlessBilling': None, 'format_errors_PaymentMethod': None, 'format_errors_MonthlyCharge': None, 'format_errors_TotalCharges': None, 'format_errors_TotalRefunds': None, 'format_errors_TotalExtraDataCharges': None, 'format_errors_TotalLongDistanceCharges': None, 'format_errors_TotalRevenue': None, 'format_errors_SatisfactionScore': None, 'format_errors_CustomerStatus': None, 'format_errors_ChurnLabel': None, 'format_errors_ChurnScore': None, 'format_errors_CLTV': None, 'format_errors_ChurnCategory': None, 'format_errors_ChurnReason': None, 'format_errors_ingestiondate': None, 'duplicates': None}

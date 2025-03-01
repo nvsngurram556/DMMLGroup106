@@ -33,7 +33,7 @@ def read_tabledata(table_name):
 
 def save_table_to_csv(table_name, csv_file_path):
     try:
-        query = f"COPY (SELECT * FROM {table_name}) TO STDOUT WITH CSV HEADER"
+        query = f"COPY (SELECT * FROM {table_name} WHERE ingestiondate = CURRENT_DATE) TO STDOUT WITH CSV HEADER"
         with open(csv_file_path, 'w') as f:
             cursor.copy_expert(query, f)
         print(f"Data from {table_name} saved to {csv_file_path}")
@@ -45,6 +45,6 @@ def save_table_to_csv(table_name, csv_file_path):
 if __name__ == "__main__":
     logging.info("------------------DataIngestion script started------------------")
     read_tabledata(db.tablename)
-    file_name = f"Staging/{db.tablename}_{date_time}.csv"
+    file_name = f"Staging/IN/{db.tablename}_{date_time}.csv"
     save_table_to_csv(db.tablename, file_name)
     logging.info("------------------DataIngestion script completed------------------")
