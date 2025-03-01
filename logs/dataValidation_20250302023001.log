@@ -1,0 +1,4 @@
+2025-03-02 02:30:01,882:INFO:All CSV files read successfully
+2025-03-02 02:30:01,886:INFO:Datasets are merged into singel file loaded successfully.
+2025-03-02 02:30:01,949:INFO:Missing values in numerical columns handled using median imputation.
+2025-03-02 02:30:02,056:INFO:Missing values in categorical columns handled using mode imputation.

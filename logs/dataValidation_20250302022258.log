@@ -1,0 +1,51 @@
+2025-03-02 02:22:58,410:INFO:All CSV files read successfully
+2025-03-02 02:22:58,412:INFO:Datasets are merged into singel file loaded successfully.
+2025-03-02 02:22:58,462:INFO:Missing values in numerical columns handled using median imputation.
+2025-03-02 02:22:58,544:INFO:Missing values in categorical columns handled using mode imputation.
+2025-03-02 02:22:58,812:INFO:Imputed data saved as 'handling_numerical_data.csv' and 'handling_categorical_data.csv'.
+2025-03-02 02:22:58,813:INFO:Imputation completed successfully.
+2025-03-02 02:22:58,817:INFO:Numerical attributes standardized using StandardScaler.
+2025-03-02 02:22:59,126:INFO:Scaled data saved as 'scaled_data.csv'.
+2025-03-02 02:22:59,629:INFO:Scaled data saved as 'scaled_data.csv'.
+2025-03-02 02:22:59,629:INFO:Standardization completed successfully.
+2025-03-02 02:22:59,768:INFO:Categorical variables one-hot encoded.
+2025-03-02 02:22:59,804:INFO:Outlier detection completed: {'age': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'numberofdependents': {'z_score_outliers': 104, 'iqr_outliers': 6508}, 'zipcode': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'latitude': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'longitude': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'population': {'z_score_outliers': 228, 'iqr_outliers': 228}, 'numberofreferrals': {'z_score_outliers': 8, 'iqr_outliers': 2704}, 'tenureinmonths': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'avgmonthlylongdistancecharges': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'avgmonthlygbdownload': {'z_score_outliers': 364, 'iqr_outliers': 1448}, 'monthlycharge': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'totalcharges': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'totalrefunds': {'z_score_outliers': 1072, 'iqr_outliers': 2100}, 'totalextradatacharges': {'z_score_outliers': 1036, 'iqr_outliers': 2912}, 'totallongdistancecharges': {'z_score_outliers': 232, 'iqr_outliers': 784}, 'totalrevenue': {'z_score_outliers': 20, 'iqr_outliers': 84}, 'satisfactionscore': {'z_score_outliers': 0, 'iqr_outliers': 3688}, 'churnscore': {'z_score_outliers': 0, 'iqr_outliers': 0}, 'cltv': {'z_score_outliers': 0, 'iqr_outliers': 0}}
+2025-03-02 02:23:00,358:INFO:Histogram for age saved at DataPreparation/Visualizations/Histograms/age_histogram.png
+2025-03-02 02:23:00,421:INFO:Histogram for numberofdependents saved at DataPreparation/Visualizations/Histograms/numberofdependents_histogram.png
+2025-03-02 02:23:00,475:INFO:Histogram for zipcode saved at DataPreparation/Visualizations/Histograms/zipcode_histogram.png
+2025-03-02 02:23:00,554:INFO:Histogram for latitude saved at DataPreparation/Visualizations/Histograms/latitude_histogram.png
+2025-03-02 02:23:00,609:INFO:Histogram for longitude saved at DataPreparation/Visualizations/Histograms/longitude_histogram.png
+2025-03-02 02:23:00,667:INFO:Histogram for population saved at DataPreparation/Visualizations/Histograms/population_histogram.png
+2025-03-02 02:23:00,728:INFO:Histogram for numberofreferrals saved at DataPreparation/Visualizations/Histograms/numberofreferrals_histogram.png
+2025-03-02 02:23:00,822:INFO:Histogram for tenureinmonths saved at DataPreparation/Visualizations/Histograms/tenureinmonths_histogram.png
+2025-03-02 02:23:00,877:INFO:Histogram for avgmonthlylongdistancecharges saved at DataPreparation/Visualizations/Histograms/avgmonthlylongdistancecharges_histogram.png
+2025-03-02 02:23:00,930:INFO:Histogram for avgmonthlygbdownload saved at DataPreparation/Visualizations/Histograms/avgmonthlygbdownload_histogram.png
+2025-03-02 02:23:00,986:INFO:Histogram for monthlycharge saved at DataPreparation/Visualizations/Histograms/monthlycharge_histogram.png
+2025-03-02 02:23:01,042:INFO:Histogram for totalcharges saved at DataPreparation/Visualizations/Histograms/totalcharges_histogram.png
+2025-03-02 02:23:01,093:INFO:Histogram for totalrefunds saved at DataPreparation/Visualizations/Histograms/totalrefunds_histogram.png
+2025-03-02 02:23:01,146:INFO:Histogram for totalextradatacharges saved at DataPreparation/Visualizations/Histograms/totalextradatacharges_histogram.png
+2025-03-02 02:23:01,197:INFO:Histogram for totallongdistancecharges saved at DataPreparation/Visualizations/Histograms/totallongdistancecharges_histogram.png
+2025-03-02 02:23:01,249:INFO:Histogram for totalrevenue saved at DataPreparation/Visualizations/Histograms/totalrevenue_histogram.png
+2025-03-02 02:23:01,303:INFO:Histogram for satisfactionscore saved at DataPreparation/Visualizations/Histograms/satisfactionscore_histogram.png
+2025-03-02 02:23:01,356:INFO:Histogram for churnscore saved at DataPreparation/Visualizations/Histograms/churnscore_histogram.png
+2025-03-02 02:23:01,411:INFO:Histogram for cltv saved at DataPreparation/Visualizations/Histograms/cltv_histogram.png
+2025-03-02 02:23:01,488:INFO:Box plot for age saved at DataPreparation/Visualizations/Boxplots/age_boxplot.png
+2025-03-02 02:23:01,562:INFO:Box plot for numberofdependents saved at DataPreparation/Visualizations/Boxplots/numberofdependents_boxplot.png
+2025-03-02 02:23:01,634:INFO:Box plot for zipcode saved at DataPreparation/Visualizations/Boxplots/zipcode_boxplot.png
+2025-03-02 02:23:01,708:INFO:Box plot for latitude saved at DataPreparation/Visualizations/Boxplots/latitude_boxplot.png
+2025-03-02 02:23:01,778:INFO:Box plot for longitude saved at DataPreparation/Visualizations/Boxplots/longitude_boxplot.png
+2025-03-02 02:23:01,848:INFO:Box plot for population saved at DataPreparation/Visualizations/Boxplots/population_boxplot.png
+2025-03-02 02:23:01,967:INFO:Box plot for numberofreferrals saved at DataPreparation/Visualizations/Boxplots/numberofreferrals_boxplot.png
+2025-03-02 02:23:02,064:INFO:Box plot for tenureinmonths saved at DataPreparation/Visualizations/Boxplots/tenureinmonths_boxplot.png
+2025-03-02 02:23:02,142:INFO:Box plot for avgmonthlylongdistancecharges saved at DataPreparation/Visualizations/Boxplots/avgmonthlylongdistancecharges_boxplot.png
+2025-03-02 02:23:02,218:INFO:Box plot for avgmonthlygbdownload saved at DataPreparation/Visualizations/Boxplots/avgmonthlygbdownload_boxplot.png
+2025-03-02 02:23:02,293:INFO:Box plot for monthlycharge saved at DataPreparation/Visualizations/Boxplots/monthlycharge_boxplot.png
+2025-03-02 02:23:02,368:INFO:Box plot for totalcharges saved at DataPreparation/Visualizations/Boxplots/totalcharges_boxplot.png
+2025-03-02 02:23:02,443:INFO:Box plot for totalrefunds saved at DataPreparation/Visualizations/Boxplots/totalrefunds_boxplot.png
+2025-03-02 02:23:02,521:INFO:Box plot for totalextradatacharges saved at DataPreparation/Visualizations/Boxplots/totalextradatacharges_boxplot.png
+2025-03-02 02:23:02,596:INFO:Box plot for totallongdistancecharges saved at DataPreparation/Visualizations/Boxplots/totallongdistancecharges_boxplot.png
+2025-03-02 02:23:02,671:INFO:Box plot for totalrevenue saved at DataPreparation/Visualizations/Boxplots/totalrevenue_boxplot.png
+2025-03-02 02:23:02,746:INFO:Box plot for satisfactionscore saved at DataPreparation/Visualizations/Boxplots/satisfactionscore_boxplot.png
+2025-03-02 02:23:02,822:INFO:Box plot for churnscore saved at DataPreparation/Visualizations/Boxplots/churnscore_boxplot.png
+2025-03-02 02:23:02,894:INFO:Box plot for cltv saved at DataPreparation/Visualizations/Boxplots/cltv_boxplot.png
+2025-03-02 02:23:02,894:INFO:Data preprocessing, outlier detection, and EDA completed successfully.
