@@ -21,7 +21,6 @@ def read_all_csv_files(directory_path):
         return combined_df
     except:
         logging.error("Error in creating the directory")
-    
 
 def check_missing_data(df):
     try:
@@ -43,20 +42,29 @@ def validate_data_types(df, expected_types):
     try:
         type_errors = {}
         for column, expected_type in expected_types.items():
-            if not df[column].dtype == expected_type:
-                type_errors[column] = df[column].dtype
-        logging.info(f"Data type errors:\n{type_errors}")
+            if column in df.columns:
+                if df[column].dtype != expected_type:
+                    type_errors[column] = df[column].dtype
+            else:
+                type_errors[column] = 'Column not found'
+        if type_errors:
+            logging.info(f"Data type errors:\n{type_errors}")
+        else:
+            logging.info("No data type errors found.")
         return type_errors
-    except:
-        logging.error("Error in validating data types")
+    except Exception as e:
+        logging.error(f"Error in validating data types: {e}")
+        return None
 
 def validate_data_formats(df, column, format_func):
     try:
         format_errors = df[~df[column].apply(format_func)]
-        logging.info(f"Data format errors in column {column}:\n{format_errors}")
+        if not format_errors.empty:
+            logging.info(f"Data format errors in column {column}:\n{format_errors}")
         return format_errors
-    except:
-        logging.error("Error in validating data formats")
+    except Exception as e:
+        logging.error(f"Error in validating data formats: {e}")
+        return None
 
 def identify_duplicates(df):
     try:
@@ -69,25 +77,26 @@ def identify_duplicates(df):
 def generate_data_quality_report(df, expected_types, format_validations):
     try:
         report = {}
-        logging.info("Missing Data") 
+        logging.info("Missing Data")
         report['missing_data'] = check_missing_data(df)
-        logging.info("Inconsistent Data") 
+        logging.info("Inconsistent Data")
         report['inconsistent_data'] = check_inconsistent_data(df)
-        logging.info("Type errors") 
+        logging.info("Type errors")
         report['type_errors'] = validate_data_types(df, expected_types)
-        logging.info("format errors")
+        logging.info("Format errors")
         for column, format_func in format_validations.items():
             report[f'format_errors_{column}'] = validate_data_formats(df, column, format_func)
-        logging.info("Duplicates Data") 
+        logging.info("Duplicates Data")
         report['duplicates'] = identify_duplicates(df)
         return report
-    except:
-        logging.error("Error in generating data quality report")
+    except Exception as e:
+        logging.error(f"Error in generating data quality report: {e}")
+        return None
 
 if __name__ == "__main__":
     # Example usage
-    df = read_all_csv_files('Staging')
-    expected_types = {'CustomerID': 'object', 'Gender': 'object', 'Age': 'int64', 'Under30': 'object', 'SeniorCitizen': 'object', 'Married': 'object', 'Dependents': 'object', 'NumberofDependents': 'int64', 'Country': 'object', 'State': 'object','City': 'object', 'ZipCode': 'int64', 'Latitude': 'float64', 'Longitude': 'float64', 'Population': 'int64', 'Quarter': 'object', 'ReferredaFriend': 'object', 'NumberofReferrals': 'int64', 'TenureinMonths': 'int64', 'Offer': 'object', 'PhoneService': 'object', 'AvgMonthlyLongDistanceCharges': 'int64', 'MultipleLines': 'object', 'InternetService': 'object', 'InternetType': 'object', 'AvgMonthlyGBDownload': 'int64', 'OnlineSecurity': 'object', 'OnlineBackup': 'object', 'DeviceProtectionPlan': 'object', 'PremiumTechSupport': 'object', 'StreamingTV': 'object', 'StreamingMovies': 'object', 'StreamingMusic': 'object', 'UnlimitedData': 'object', 'Contract': 'object', 'PaperlessBilling': 'object', 'PaymentMethod': 'object', 'MonthlyCharge': 'float64', 'TotalCharges': 'float64', 'TotalRefunds': 'float64', 'TotalExtraDataCharges': 'int64', 'TotalLongDistanceCharges': 'float64', 'TotalRevenue': 'float64', 'SatisfactionScore': 'int64', 'CustomerStatus': 'object', 'ChurnLabel': 'object', 'ChurnScore': 'int64', 'CLTV': 'int64', 'ChurnCategory': 'object', 'ChurnReason': 'object', 'ingestiondate': 'date'}
-    format_validations = {'CustomerID': lambda x: x.str.len().max(), 'Gender': lambda x: x.str.len().max(), 'Age': lambda x: len(str(x.max())), 'Under30': lambda x: x.str.len().max(), 'SeniorCitizen': lambda x: x.str.len().max(), 'Married': lambda x: x.str.len().max(), 'Dependents': lambda x: x.str.len().max(), 'NumberofDependents': lambda x: len(str(x.max())), 'Country': lambda x: x.str.len().max(), 'State': lambda x: x.str.len().max(),'City': lambda x: x.str.len().max(), 'ZipCode': lambda x: len(str(x.max())), 'Latitude': lambda x: len(str(x.max())), 'Longitude': lambda x: len(str(x.max())), 'Population': lambda x: len(str(x.max())), 'Quarter': lambda x: x.str.len().max(), 'ReferredaFriend': lambda x: x.str.len().max(), 'NumberofReferrals': lambda x: len(str(x.max())), 'TenureinMonths': lambda x: len(str(x.max())), 'Offer': lambda x: x.str.len().max(), 'PhoneService': lambda x: x.str.len().max(), 'AvgMonthlyLongDistanceCharges': lambda x: len(str(x.max())), 'MultipleLines': lambda x: x.str.len().max(), 'InternetService': lambda x: x.str.len().max(), 'InternetType': lambda x: x.str.len().max(), 'AvgMonthlyGBDownload': lambda x: len(str(x.max())), 'OnlineSecurity': lambda x: x.str.len().max(), 'OnlineBackup': lambda x: x.str.len().max(), 'DeviceProtectionPlan': lambda x: x.str.len().max(), 'PremiumTechSupport': lambda x: x.str.len().max(), 'StreamingTV': lambda x: x.str.len().max(), 'StreamingMovies': lambda x: x.str.len().max(), 'StreamingMusic': lambda x: x.str.len().max(), 'UnlimitedData': lambda x: x.str.len().max(), 'Contract': lambda x: x.str.len().max(), 'PaperlessBilling': lambda x: x.str.len().max(), 'PaymentMethod': lambda x: x.str.len().max(), 'MonthlyCharge': lambda x: len(str(x.max())), 'TotalCharges': lambda x: len(str(x.max())), 'TotalRefunds': lambda x: len(str(x.max())), 'TotalExtraDataCharges': lambda x: len(str(x.max())), 'TotalLongDistanceCharges': lambda x: len(str(x.max())), 'TotalRevenue': lambda x: len(str(x.max())), 'SatisfactionScore': lambda x: len(str(x.max())), 'CustomerStatus': lambda x: x.str.len().max(), 'ChurnLabel': lambda x: x.str.len().max(), 'ChurnScore': lambda x: len(str(x.max())), 'CLTV': lambda x: len(str(x.max())), 'ChurnCategory': lambda x: x.str.len().max(), 'ChurnReason': lambda x: x.str.len().max(), 'ingestiondate': lambda x: x.str.len().max()} # Example format validation
+    df = read_all_csv_files('Staging/IN')
+    expected_types = { 'customerid': 'object', 'gender': 'object', 'age': 'int64', 'under30': 'object', 'seniorcitizen': 'object', 'married': 'object', 'dependents': 'object', 'numberofdependents': 'int64', 'country': 'object', 'state': 'object', 'city': 'object', 'zipcode': 'object', 'latitude': 'float64', 'longitude': 'float64', 'population': 'int64', 'quarter': 'object', 'referredafriend': 'object', 'numberofreferrals': 'int64', 'tenureinmonths': 'int64', 'offer': 'object', 'phoneservice': 'object', 'avgmonthlylongdistancecharges': 'float64', 'multiplelines': 'object', 'internetservice': 'object', 'internettype': 'object', 'avgmonthlygbdownload': 'float64', 'onlinesecurity': 'object', 'onlinebackup': 'object', 'deviceprotectionplan': 'object', 'premiumtechsupport': 'object', 'streamingtv': 'object', 'streamingmovies': 'object', 'streamingmusic': 'object', 'unlimiteddata': 'object', 'contract': 'object', 'paperlessbilling': 'object', 'paymentmethod': 'object', 'monthlycharge': 'float64', 'totalcharges': 'float64', 'totalrefunds': 'float64', 'totalextradatacharges': 'float64', 'totallongdistancecharges': 'float64', 'totalrevenue': 'float64', 'satisfactionscore': 'int64', 'customerstatus': 'object', 'churnlabel': 'object', 'churnscore': 'int64', 'cltv': 'int64', 'churncategory': 'object', 'churnreason': 'object', 'ingestiondate': 'object' }
+    format_validations = {'CustomerID': lambda x: x.str.len() == 6, 'Gender': lambda x: x.isin(['Male', 'Female']), 'Age': lambda x: x.between(0, 120), 'Under30': lambda x: x.isin(['Yes', 'No']), 'SeniorCitizen': lambda x: x.isin(['Yes', 'No']), 'Married': lambda x: x.isin(['Yes', 'No']), 'Dependents': lambda x: x.isin(['Yes', 'No']), 'NumberofDependents': lambda x: x.between(0, 10), 'Country': lambda x: x.str.len() > 0, 'State': lambda x: x.str.len() > 0, 'City': lambda x: x.str.len() > 0, 'ZipCode': lambda x: x.str.len() == 5, 'Latitude': lambda x: x.between(-90, 90), 'Longitude': lambda x: x.between(-180, 180), 'Population': lambda x: x > 0, 'Quarter': lambda x: x.str.len() > 0, 'ReferredaFriend': lambda x: x.isin(['Yes', 'No']), 'NumberofReferrals': lambda x: x >= 0, 'TenureinMonths': lambda x: x >= 0, 'Offer': lambda x: x.str.len() > 0, 'PhoneService': lambda x: x.isin(['Yes', 'No']), 'AvgMonthlyLongDistanceCharges': lambda x: x >= 0, 'MultipleLines': lambda x: x.isin(['Yes', 'No']), 'InternetService': lambda x: x.str.len() > 0, 'InternetType': lambda x: x.str.len() > 0, 'AvgMonthlyGBDownload': lambda x: x >= 0, 'OnlineSecurity': lambda x: x.isin(['Yes', 'No']), 'OnlineBackup': lambda x: x.isin(['Yes', 'No']), 'DeviceProtectionPlan': lambda x: x.isin(['Yes', 'No']), 'PremiumTechSupport': lambda x: x.isin(['Yes', 'No']), 'StreamingTV': lambda x: x.isin(['Yes', 'No']), 'StreamingMovies': lambda x: x.isin(['Yes', 'No']), 'StreamingMusic': lambda x: x.isin(['Yes', 'No']), 'UnlimitedData': lambda x: x.isin(['Yes', 'No']), 'Contract': lambda x: x.str.len() > 0, 'PaperlessBilling': lambda x: x.isin(['Yes', 'No']), 'PaymentMethod': lambda x: x.str.len() > 0, 'MonthlyCharge': lambda x: x >= 0, 'TotalCharges': lambda x: x >= 0, 'TotalRefunds': lambda x: x >= 0, 'TotalExtraDataCharges': lambda x: x >= 0, 'TotalLongDistanceCharges': lambda x: x >= 0, 'TotalRevenue': lambda x: x >= 0, 'SatisfactionScore': lambda x: x.between(1, 5), 'CustomerStatus': lambda x: x.str.len() > 0, 'ChurnLabel': lambda x: x.str.len() > 0, 'ChurnScore': lambda x: x.between(0, 100), 'CLTV': lambda x: x >= 0, 'ChurnCategory': lambda x: x.str.len() > 0, 'ChurnReason': lambda x: x.str.len() > 0, 'ingestiondate': lambda x: pd.to_datetime(x, errors='coerce').notnull()} # Example format validation
     report = generate_data_quality_report(df, expected_types, format_validations)
     logging.info(f"Data Quality Report:\n{report}")

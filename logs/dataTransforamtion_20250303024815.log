@@ -1,0 +1,6 @@
+2025-03-03 02:48:22,230:INFO:Connected to the database
+2025-03-03 02:48:22,242:ERROR:Error in inserting the data: column "premiumtechsupport" of relation "customers" does not exist
+LINE 2: ...linesecurity, onlinebackup, deviceprotectionplan, premiumtec...
+                                                             ^
+
+2025-03-03 02:48:22,244:INFO:------------------Part 2 DataIngestion completed------------------
