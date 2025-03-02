@@ -1,0 +1,3 @@
+2025-03-03 02:42:31,522:INFO:Connected to the database
+2025-03-03 02:42:31,528:ERROR:Error in inserting the data: 'premiumtechsuppor'
+2025-03-03 02:42:31,530:INFO:------------------Part 2 DataIngestion completed------------------
