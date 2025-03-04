@@ -32,13 +32,17 @@ def download_dataset():
         print("Error in downloading the dataset")
         logging.error("Error in downloading the dataset")
 
-def file_columns_update():
+def file_columns_update(date_time):
     try:
         dataset = pd.read_csv('Inputfiles/telco.csv')
         dataset.columns = dataset.columns.str.replace(' ', '')
-        dataset.to_csv('Inputfiles/telco.csv', index=False)
+        dataset.to_csv(f'Inputfiles/telco_{date_time}.csv', index=False)
         print("Columns are updated successfully")
         logging.info("Columns are updated successfully")
+        if os.path.exists('Inputfiles/telco.csv'):
+            os.remove('Inputfiles/telco.csv')
+            print("Original file is removed")
+            logging.info("Original file is removed")
     except:
         print("Error in reading the dataset")
         logging.error("Error in reading the dataset")
@@ -97,7 +101,7 @@ if __name__ == "__main__":
     logging.info("------------------DataIngestion script started------------------")
     logging.info("------------------Part 1 DataIngestion started------------------")
     download_dataset()
-    file_columns_update()
+    file_columns_update(date_time)
     logging.info("------------------Part 1 DataIngestion completed------------------")
     logging.info("------------------Part 2 DataIngestion started------------------")
     if not check_table_exists(db.tablename):
@@ -106,7 +110,7 @@ if __name__ == "__main__":
         logging.info("Table created successfully")
     else:
         logging.warning("Table already exists")
-    dataset = pd.read_csv('Inputfiles/telco.csv')
+    dataset = pd.read_csv(f'Inputfiles/telco_{date_time}.csv')
     insert_data(db.tablename, dataset)
     logging.info("------------------Part 2 DataIngestion completed------------------")
     cursor.close()
