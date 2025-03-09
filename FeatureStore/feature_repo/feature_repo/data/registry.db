@@ -1,0 +1,37 @@
+
+\
+<
+customerID of the Customer"customer_idsJfeature_repo
+…ý´¾àÝÊ…ý´¾àÝÊ
+C
+#
+__dummy"
+__dummy_idJfeature_repo
+…ý´¾àÝÊ…ý´¾àÝÊ1"$f71e2356-025e-486b-b6c6-539f31143146*…ý´¾¸Ë2÷
+Ö
+target_df_feature_viewfeature_repocustomer"
+
+churnlabel2€£:zevent_timestampZdata\target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data\target_df.parquet@b
+customer_ids
+…ý´¾ˆê¾Ê…ý´¾ˆê¾Ê2Û
+º
+customer_df_feature_viewfeature_repocustomer"
+
+gender"
+age"
+satisfactionscore"
+
+churnlabel"
+monthlycharge"
+avgmonthlygbdownload2€£:‚event_timestampZdata\predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data\predictors_df.parquet@b
+customer_ids
+…ý´¾ˆê¾Ê…ý´¾ˆê¾ÊR”
+ˆ
+,feast.infra.online_stores.sqlite.SqliteTable"×
+­C:\Users\sarma\OneDrive\Documents\Anusha\BITSPIL\Course\DMML\Assignment\Final\DMMLGroup106-main\DMMLGroup106-main\FeatureStore\feature_repo\feature_repo\data\online_store.db%feature_repo_customer_df_feature_view
+†
+,feast.infra.online_stores.sqlite.SqliteTable"Õ
+­C:\Users\sarma\OneDrive\Documents\Anusha\BITSPIL\Course\DMML\Assignment\Final\DMMLGroup106-main\DMMLGroup106-main\FeatureStore\feature_repo\feature_repo\data\online_store.db#feature_repo_target_df_feature_viewb‘event_timestampZdata\predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data\predictors_df.parquetªfeature_repob‰event_timestampZdata\target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data\target_df.parquetªfeature_repoŠ.
+
+feature_repo
+…ý´¾ˆ©èâ…ý´¾ˆ©èâ
