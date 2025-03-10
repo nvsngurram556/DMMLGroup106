@@ -7,8 +7,14 @@ C
 #
 __dummy"
 __dummy_idJfeature_repo
-…ı´¾àİÊ…ı´¾àİÊ1"$d22a6bea-3f2d-484c-9891-d199a826ca53*Ñÿ»¾ØòÆÜ2Û
-º
+…ı´¾àİÊ…ı´¾àİÊ1"$b739dc70-557f-4ea9-80e6-2fdea9dd4990*îğ¼¾ ùıs2÷
+Ö
+target_df_feature_viewfeature_repocustomer"
+
+churnlabel2€£:zevent_timestampZdata/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/target_df.parquet@b
+customer_ids
+…ı´¾ˆê¾ÊÑÿ»¾ Ê¢Ü2í
+Í
 customer_df_feature_viewfeature_repocustomer"
 
 gender"
@@ -17,15 +23,15 @@ __dummy_idJfeature_repo
 
 churnlabel"
 monthlycharge"
-avgmonthlygbdownload2€£:‚event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquet@b
-customer_ids
-…ı´¾ˆê¾ÊÑÿ»¾è¶÷Û2÷
-Ö
-target_df_feature_viewfeature_repocustomer"
+avgmonthlygbdownload"!
+avgmonthlylongdistancecharges"
 
-churnlabel2€£:zevent_timestampZdata/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/target_df.parquet@b
-customer_ids
-…ı´¾ˆê¾ÊÑÿ»¾ Ê¢ÜR¶
+customerid"
+customer_tenure_months"
+customers_all_type_services"!
+total_spent_bycustomer_yearly2€£:‚event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquet@b
+customer_ids
+…ı´¾ˆê¾Êîğ¼¾è¡¿sR¶
 ™
 ,feast.infra.online_stores.sqlite.SqliteTable"è
 ¾/Users/nagavenkatasatyanarayanagurram/Documents/M.Tech/Semester - 2/Data Management for Machine Learning/DMMLGroup106/DMMLGroup106/FeatureStore/feature_repo/feature_repo/data/online_store.db%feature_repo_customer_df_feature_view
