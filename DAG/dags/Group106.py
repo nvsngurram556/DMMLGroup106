@@ -21,22 +21,35 @@ def run_DataValidation():
 
 @task
 def run_DataPreparation():
-    dataPreparation = subprocess.run(["python", "DataIngestion/dataPreparation.py"])
+    dataPreparation = subprocess.run(["python", "DataPreparation/dataPreparation.py"])
     return dataPreparation.stdout, dataPreparation.stderr
 
 @task
 def run_DataTransformation():
-    dataTransformation = subprocess.run(["python", "DataIngestion/dataTransformation.py"])
+    dataTransformation = subprocess.run(["python", "DataTransformation/dataTransformation.py"])
     return dataTransformation.stdout, dataTransformation.stderr
 
+@task
+def run_FeatureStore():
+    dataFeatureStore = subprocess.run(["python", "FeatureStore/featureStore.py"])
+    return dataFeatureStore.stdout, dataFeatureStore.stderr
+
+@task
+def run_Model():
+    dataModel = subprocess.run(["python", "Model/model.py"])
+    return dataModel.stdout, dataModel.stderr
+
+
 @flow
-def my_flow() -> str:
+def DMMLGroup106() -> str:
     run_DataIngestion()
     run_RawDataStorage()
     run_DataValidation()
     run_DataPreparation()
     run_DataTransformation()
+    run_FeatureStore()
+    run_Model()
     return "Done"
 
 if __name__ == "__main__":
-    print(my_flow())
+    print(DMMLGroup106())
