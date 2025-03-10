@@ -1,20 +1,20 @@
 import subprocess
 import pandas as pd
+import os
 from feast import FeatureStore
 from feast.infra.offline_stores.file_source import SavedDatasetFileStorage
 
+date_time = pd.Timestamp.now().strftime("%Y%m%d%H%M%S")
 def initiate_feature_store():
     # Ensure Feast is installed and initialized before running this script
     subprocess.run(["feast", "version"])
      
     # Initialize Feast repository
-    subprocess.run(["feast", "init", "-m", "feature_repo"], cwd=".")
-     
-    
+    subprocess.run(["feast", "init", "-m", "feature_repo"], cwd=".")     
 
 def getTransformedData():
     # Load the transformed data
-    data = pd.read_csv('../Staging/Transformed_data.csv')
+    data = pd.read_csv('Staging/Transformed_data.csv')
     predictors_df = data.loc[:, data.columns != 'churnreason']
     target_df = data['churnreason']
      
@@ -28,8 +28,8 @@ def getTransformedData():
     predictors_df = pd.concat(objs=[predictors_df, customer_ids], axis=1)
     target_df = pd.concat(objs=[target_df, customer_ids], axis=1)
      
-    predictors_df.to_parquet(path='feature_repo/feature_repo/data/predictors_df.parquet')
-    target_df.to_parquet(path='feature_repo/feature_repo/data/target_df.parquet')
+    predictors_df.to_parquet(path='FeatureStore/feature_repo/feature_repo/data/predictors_df.parquet')
+    target_df.to_parquet(path='FeatureStore/feature_repo/feature_repo/data/target_df.parquet')
     
     #print(predictors_df.describe())
  
@@ -37,10 +37,10 @@ def getTransformedData():
 def historicalFeaturesFromFeatureStore():
     
     # Initialize FeatureStore
-    store = FeatureStore(repo_path='feature_repo/feature_repo')
+    store = FeatureStore(repo_path='FeatureStore/feature_repo/feature_repo')
      
     # Read entity DataFrame from a Parquet file
-    entity_df = pd.read_parquet(path='feature_repo/feature_repo/data/target_df.parquet')
+    entity_df = pd.read_parquet(path='FeatureStore/feature_repo/feature_repo/data/target_df.parquet')
      
     # Get historical features from the FeatureStore
     training_df = store.get_historical_features(
@@ -59,16 +59,21 @@ def historicalFeaturesFromFeatureStore():
     #dataset = store.create_saved_dataset(from_=training_data, name = "customer_churn_dataset", storage=SavedDataFileStorage('data/customer_churn_dataset.parquet'))
     #training_data
      
-    training_df.to_csv('feature_repo/feature_repo/data/customer_churn_dataset.csv')
+    training_df.to_csv(f'Outputfiles/customer_churn_dataset_{date_time}.csv')
     print("Dataset created")
     
 if __name__=='__main__':
     #initiate_feature_store()
+    if os.makedirs('FeatureStore/feature_repo', exist_ok=True):
+        print("Directory created")
+    else:
+        print("Directory not created")
+        initiate_feature_store()
     
-    #getTransformedData()
+    getTransformedData()
     
     # Apply Feast configuration
-    #subprocess.run(["feast", "apply"], cwd="feature_repo/feature_repo")
+    subprocess.run(["feast", "apply"], cwd="FeatureStore/feature_repo/feature_repo")
     
     historicalFeaturesFromFeatureStore()
 

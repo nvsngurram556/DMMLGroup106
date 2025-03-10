@@ -35,7 +35,7 @@ customer = Entity(name="customer", join_keys = ["customer_ids"], value_type = Va
 # production, you can use your favorite DWH, such as BigQuery. See Feast documentation
 # for more info.
 customer_stats_source = FileSource(
-    path=r"data\predictors_df.parquet",
+    path=r"data/predictors_df.parquet",
     timestamp_field="event_timestamp",
 )
 
@@ -68,7 +68,7 @@ customer_fv = FeatureView(
 )
 
 target_source = FileSource(
-    path=r"data\target_df.parquet",
+    path=r"data/target_df.parquet",
     timestamp_field="event_timestamp",
 )
 
