@@ -1,12 +1,12 @@
 import subprocess
-#import datetime
+import datetime
 from prefect import task, flow
-#from prefect.schedules import IntervalSchedule
+from prefect.schedules import IntervalSchedule
 
 @task
 def run_DataIngestion():
     dataIngestion_result = subprocess.run(["python", "DataIngestion/dataIngestionApiInputFile.py"])
-    #schedule = IntervalSchedule(interval=datetime.timedelta(hours=1))
+    schedule = IntervalSchedule(interval=datetime.timedelta(hours=24))
     return dataIngestion_result.stdout, dataIngestion_result.stderr
 
 @task
