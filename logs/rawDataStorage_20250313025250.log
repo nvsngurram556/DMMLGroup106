@@ -1,0 +1,4 @@
+2025-03-13 02:52:50,976:INFO:Connected to the database
+2025-03-13 02:52:50,976:INFO:------------------DataIngestion script started------------------
+2025-03-13 02:52:51,263:INFO:Data from telecom_customers saved to Staging/IN/telecom_customers_20250313025250.csv
+2025-03-13 02:52:51,263:INFO:------------------DataIngestion script completed------------------

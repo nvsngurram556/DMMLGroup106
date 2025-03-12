@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import logging
 import sys
+import glob
 from feast import FeatureStore
 from feast.infra.offline_stores.file_source import SavedDatasetFileStorage
 
@@ -30,12 +31,17 @@ def read_all_csv_files(directory_path):
     except:
         print("Error in creating the directory")
 
-def getTransformedData(data):
+def getTransformedData():
     # Load the transformed data
+    data = read_all_csv_files('Staging/Cleansed_data')
+    if data is None:
+            logging.error("Failed to read the CSV files from Staging/Cleansed_data")
+            return
     predictors_df = data.loc[:, data.columns != 'churnreason']
     target_df = data['churnreason']
+    num_periods = min(len(data), 365)
      
-    timestamps = pd.date_range(end=pd.Timestamp.now(), periods=len(data), freq='D').to_frame(name='event_timestamp', index=False)
+    timestamps = pd.date_range(end=pd.Timestamp.now(), periods=num_periods, freq='D').to_frame(name='event_timestamp', index=False)
     predictors_df = pd.concat(objs=[predictors_df, timestamps], axis=1)
     target_df = pd.concat(objs=[target_df, timestamps], axis=1)
      
@@ -87,8 +93,8 @@ if __name__=='__main__':
     else:
         print("Directory not created")
         initiate_feature_store()
-    dataset = read_all_csv_files('Staging/Cleansed_data')
-    getTransformedData(dataset)
+    getTransformedData()
+    
     # Apply Feast configuration
     subprocess.run(["feast", "apply"], cwd="FeatureStore/feature_repo/feature_repo")
     logging.info("Applied Feast configuration")

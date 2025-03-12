@@ -85,15 +85,10 @@ for name, model in models.items():
         "f1_score": f1
     }
 
-    print(f"\n📊 {name} Performance:")
-    logging.info(f"\n📊 {name} Performance:")
-    print(f"  Accuracy : {accuracy:.4f}")
+    logging.info(f"\n {name} Performance:")
     logging.info(f"  Accuracy : {accuracy:.4f}")
-    print(f"  Precision: {precision:.4f}")
     logging.info(f"  Precision: {precision:.4f}")
-    print(f"  Recall   : {recall:.4f}")
     logging.info(f"  Recall   : {recall:.4f}")
-    print(f"  F1 Score : {f1:.4f}")
     logging.info(f"  F1 Score : {f1:.4f}")
 
 # 6. Select and save best model
@@ -110,6 +105,5 @@ model_filename = f"{model_dir}/churn_model_{best_model_name}_{timestamp}.joblib"
 logging.info(f"Saving best model as: {model_filename}")
 
 joblib.dump(best_model, model_filename)
-print(f"\n✅ Best model ({best_model_name}) saved as: {model_filename}")
-logging.info(f"\n✅ Best model ({best_model_name}) saved as: {model_filename}")
+logging.info(f"\n Best model ({best_model_name}) saved as: {model_filename}")
 logging.info("Model training completed")
