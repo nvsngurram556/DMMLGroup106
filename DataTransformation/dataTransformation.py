@@ -48,9 +48,7 @@ dataset[num_cols] = normalization.fit_transform(dataset[num_cols])
 
 # Save intermediate result
 
-dataset.to_csv("Staging/Transformed_data.csv", index=False)
-
-print(dataset.info())
+dataset.to_csv(f"Staging/Transformed_data_{date_time}.csv", index=False)
 
 # Database session establishment
 try:

@@ -17,10 +17,21 @@ def initiate_feature_store():
     # Initialize Feast repository
     subprocess.run(["feast", "init", "-m", "feature_repo"], cwd=".")   
     logging.info("Feature Store initiated")  
+def read_all_csv_files(directory_path):
+    try:
+        os.makedirs(directory_path, exist_ok=True)
+        all_files = glob.glob(os.path.join(directory_path, "*.csv"))
+        df_list = []
+        for file in all_files:
+            df = pd.read_csv(file)
+            df_list.append(df)
+        combined_df = pd.concat(df_list, ignore_index=True)
+        return combined_df
+    except:
+        print("Error in creating the directory")
 
-def getTransformedData():
+def getTransformedData(data):
     # Load the transformed data
-    data = pd.read_csv('Staging/Transformed_data.csv')
     predictors_df = data.loc[:, data.columns != 'churnreason']
     target_df = data['churnreason']
      
@@ -76,9 +87,8 @@ if __name__=='__main__':
     else:
         print("Directory not created")
         initiate_feature_store()
-    
-    getTransformedData()
-    
+    dataset = read_all_csv_files('Staging/Cleansed_data')
+    getTransformedData(dataset)
     # Apply Feast configuration
     subprocess.run(["feast", "apply"], cwd="FeatureStore/feature_repo/feature_repo")
     logging.info("Applied Feast configuration")

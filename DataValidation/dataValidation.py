@@ -104,7 +104,7 @@ def read_all_csv_files(directory_path):
     except:
         print("Error in creating the directory")
 
-def identify_duplicates():
+def identify_duplicates(df):
     try:
         duplicates = df[df.duplicated()]
         logging.info(f"Duplicate records:\n{duplicates}")
@@ -118,6 +118,7 @@ df = read_all_csv_files('Staging/IN/')
 logging.info("All staging files are loaded into dataframe for validation\n")
 report = []
 validation(df, expected_schema, report_output)
+identify_duplicates(df)
 report_df = pd.DataFrame(report)
 report_df.to_csv(report_output, index=False)
 logging.info(f"Report is exported to {report_output}")

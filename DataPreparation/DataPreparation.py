@@ -39,7 +39,6 @@ dataset['tenureinmonths'] = dataset['tenureinmonths'].astype(int)
 dataset['customer_joined_date'] = pd.to_datetime(dataset['ingestiondate']) - dataset['tenureinmonths'].apply(lambda x: relativedelta(months=x))
 drop_columns = ['tenureinmonths', 'totalcharges', 'totalrefunds', 'totalextradatacharges', 'totallongdistancecharges', 'totalrevenue']
 dataset = dataset.drop(columns=drop_columns)
-print(dataset.info())
 dataset_no_duplicates = dataset.drop_duplicates()
 
 # Save the resulting DataFrame to a new CSV file
