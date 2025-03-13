@@ -52,4 +52,9 @@ def DMMLGroup106() -> str:
     return "Done"
 
 if __name__ == "__main__":
-    print(DMMLGroup106())
+    deployment = DMMLGroup106.serve(
+        name="group106deployment",
+        corn="0 * * * *"
+        )
+    deployment.apply()
+    print("Deployment created with daily schedule")
