@@ -1,0 +1,69 @@
+2025-03-13 06:00:53,139:INFO:All staging files are loaded into dataframe for validation
+
+2025-03-13 06:00:53,153:INFO:Column customerid validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,161:INFO:Column gender validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,166:INFO:Column age validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,174:INFO:Column under30 validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,182:INFO:Column seniorcitizen validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,190:INFO:Column married validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,198:INFO:Column dependents validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,207:INFO:Column numberofdependents validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,216:INFO:Column country validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,224:INFO:Column state validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,233:INFO:Column city validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,237:INFO:Column zipcode validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,244:INFO:Column latitude validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,248:INFO:Column longitude validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,252:INFO:Column population validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,260:INFO:Column quarter validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,268:INFO:Column referredafriend validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,274:INFO:Column numberofreferrals validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,278:INFO:Column tenureinmonths validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,284:INFO:Column offer validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,292:INFO:Column phoneservice validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,298:INFO:Column avgmonthlylongdistancecharges validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,306:INFO:Column multiplelines validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,314:INFO:Column internetservice validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,322:INFO:Column internettype validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,327:INFO:Column avgmonthlygbdownload validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,335:INFO:Column onlinesecurity validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,343:INFO:Column onlinebackup validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,351:INFO:Column deviceprotectionplan validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,358:INFO:Column premiumtechsupport validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,366:INFO:Column streamingtv validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,375:INFO:Column streamingmovies validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,383:INFO:Column streamingmusic validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,391:INFO:Column unlimiteddata validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,400:INFO:Column contract validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,408:INFO:Column paperlessbilling validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,418:INFO:Column paymentmethod validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,424:INFO:Column monthlycharge validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,430:INFO:Column totalcharges validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,437:INFO:Column totalrefunds validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,443:INFO:Column totalextradatacharges validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,451:INFO:Column totallongdistancecharges validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,457:INFO:Column totalrevenue validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,463:INFO:Column satisfactionscore validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,471:INFO:Column customerstatus validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,479:INFO:Column churnlabel validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,483:INFO:Column churnscore validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,486:INFO:Column cltv validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,491:INFO:Column churncategory validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,496:INFO:Column churnreason validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,504:INFO:Column ingestiondate validation results are added as a row into the report DataValidation/validation_report_20250313060052.csv
+2025-03-13 06:00:53,659:INFO:Duplicate records:
+        customerid  gender  ...                   churnreason ingestiondate
+21      8779-QRDMV    Male  ...  Competitor offered more data    2025-03-13
+22      7495-OOKFY  Female  ...  Competitor made better offer    2025-03-13
+23      1658-BYGOY    Male  ...  Competitor made better offer    2025-03-13
+24      4598-XLKNJ  Female  ...     Limited range of services    2025-03-13
+25      4846-WHAFZ  Female  ...            Extra data charges    2025-03-13
+...            ...     ...  ...                           ...           ...
+147898  2569-WGERO  Female  ...                           NaN    2025-03-13
+147899  6840-RESVB    Male  ...                           NaN    2025-03-13
+147900  2234-XADUH  Female  ...                           NaN    2025-03-13
+147901  4801-JZAZL  Female  ...                           NaN    2025-03-13
+147902  3186-AJIEK    Male  ...                           NaN    2025-03-13
+
+[140860 rows x 51 columns]
+2025-03-13 06:00:53,670:INFO:Report is exported to DataValidation/validation_report_20250313060052.csv

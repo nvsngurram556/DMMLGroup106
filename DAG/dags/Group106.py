@@ -29,7 +29,7 @@ def run_DataTransformation():
 
 @task
 def run_FeatureStore():
-    dataFeatureStore = subprocess.run(["python", "FeatureStore/featureStore.py"])
+    dataFeatureStore = subprocess.run(["python", "FeatureStore/Feature_Store.py"])
     return dataFeatureStore.stdout, dataFeatureStore.stderr
 
 @task
