@@ -1,12 +1,10 @@
 import subprocess
 import datetime
 from prefect import task, flow
-from prefect.schedules import IntervalSchedule
 
 @task
 def run_DataIngestion():
     dataIngestion_result = subprocess.run(["python", "DataIngestion/dataIngestionApiInputFile.py"])
-    schedule = IntervalSchedule(interval=datetime.timedelta(hours=24))
     return dataIngestion_result.stdout, dataIngestion_result.stderr
 
 @task
@@ -54,7 +52,7 @@ def DMMLGroup106() -> str:
 if __name__ == "__main__":
     deployment = DMMLGroup106.serve(
         name="group106deployment",
-        corn="0 * * * *"
+        cron="0 * * * *"
         )
     deployment.apply()
     print("Deployment created with daily schedule")

@@ -1,0 +1,16 @@
+2025-03-13 05:56:58,306:INFO:Feature Store initiated
+2025-03-13 05:56:58,474:INFO:Transformed data loaded
+2025-03-13 05:57:00,787:INFO:Applied Feast configuration
+2025-03-13 05:57:01,060:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,060:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,061:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,061:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,061:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,062:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,062:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,062:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,063:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,063:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,063:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,065:INFO:Registry cache expired, so refreshing
+2025-03-13 05:57:01,553:INFO:Historical features created

@@ -7,7 +7,7 @@ C
 #
 __dummy"
 __dummy_idJfeature_repo
-…ı´¾àİÊ…ı´¾àİÊ1"$e922f477-f303-4e2b-977d-017ada421a75*£ıÇ¾ØÁ£~2÷
+…ı´¾àİÊ…ı´¾àİÊ1"$bd82507b-6c87-43db-9200-88fdc5738c1c*ÔÌÈ¾ÈÎ¹¯2÷
 Ö
 target_df_feature_viewfeature_repocustomer"
 
@@ -31,13 +31,13 @@ customerid"
 customers_all_type_services"!
 total_spent_bycustomer_yearly2€£:‚event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquet@b
 customer_ids
-…ı´¾ˆê¾Êîğ¼¾è¡¿sR¶
-™
-,feast.infra.online_stores.sqlite.SqliteTable"è
-¾/Users/nagavenkatasatyanarayanagurram/Documents/M.Tech/Semester - 2/Data Management for Machine Learning/DMMLGroup106/DMMLGroup106/FeatureStore/feature_repo/feature_repo/data/online_store.db%feature_repo_customer_df_feature_view
+…ı´¾ˆê¾Êîğ¼¾è¡¿sR²
 —
 ,feast.infra.online_stores.sqlite.SqliteTable"æ
-¾/Users/nagavenkatasatyanarayanagurram/Documents/M.Tech/Semester - 2/Data Management for Machine Learning/DMMLGroup106/DMMLGroup106/FeatureStore/feature_repo/feature_repo/data/online_store.db#feature_repo_target_df_feature_viewb‰event_timestampZdata/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/target_df.parquetªfeature_repob‘event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquetªfeature_repoŠ.
+¼/Users/nagavenkatasatyanarayanagurram/Documents/M.Tech/Semester - 2/Data Management for Machine Learning/Assignment/DMMLGroup106/FeatureStore/feature_repo/feature_repo/data/online_store.db%feature_repo_customer_df_feature_view
+•
+,feast.infra.online_stores.sqlite.SqliteTable"ä
+¼/Users/nagavenkatasatyanarayanagurram/Documents/M.Tech/Semester - 2/Data Management for Machine Learning/Assignment/DMMLGroup106/FeatureStore/feature_repo/feature_repo/data/online_store.db#feature_repo_target_df_feature_viewb‰event_timestampZdata/target_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/target_df.parquetªfeature_repob‘event_timestampZdata/predictors_df.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢data/predictors_df.parquetªfeature_repoŠ.
 
 feature_repo
 …ı´¾ˆ©èâ…ı´¾ˆ©èâ
